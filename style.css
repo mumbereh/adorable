@@ -1,27 +1,24 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #f4f4f9;
     color: #333;
-    background-color: #f0f0f0;
 }
 
 /* Navbar */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-}
-
 .navbar {
+    background-color: #333;
+    color: #fff;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 .logo {
@@ -31,81 +28,80 @@ header {
 
 .nav-links {
     list-style: none;
-    display: flex;
 }
 
 .nav-links li {
+    display: inline;
     margin-left: 1.5rem;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #ff5733;
+    color: #f4b41a;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    color: #fff;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 2rem;
+    background: #f4b41a;
+    color: #fff;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Sections */
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Section Styles */
 .section {
-    padding: 3rem 2rem;
+    padding: 2rem;
     text-align: center;
 }
 
 .section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
     color: #333;
 }
 
+/* Card Styles */
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    gap: 1.5rem;
 }
 
 .card {
     background-color: #fff;
-    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 280px;
+    padding: 1rem;
     text-align: left;
 }
 
 .card h3 {
-    color: #ff5733;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #f4b41a;
 }
 
-/* Contact Section */
-.contact ul {
-    list-style: none;
+.card p {
+    font-size: 1rem;
+    color: #555;
 }
 
-.contact li {
-    margin: 0.5rem 0;
-    font-weight: bold;
-}
-
-/* Card image styling */
+/* Image Styling */
 .card img {
     width: 100%;
     height: auto;
@@ -113,11 +109,34 @@ header {
     margin-bottom: 1rem;
 }
 
+/* Contact Section */
+.contact ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.contact li {
+    margin-bottom: 0.5rem;
+}
+
 /* Footer */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
     font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
