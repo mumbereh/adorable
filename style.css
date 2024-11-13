@@ -105,6 +105,14 @@ header {
     font-weight: bold;
 }
 
+/* Card image styling */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
 /* Footer */
 footer {
     background: #333;
