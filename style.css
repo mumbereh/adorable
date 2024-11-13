@@ -96,11 +96,13 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 120px;
+    width: 140px;
+    height: 140px; /* Ensure consistent size */
     padding: 0.5rem;
     text-align: center;
     flex-direction: column;
     align-items: center;
+    animation: zoom 3s infinite; /* Add zoom animation */
 }
 
 .sub-card img {
@@ -116,13 +118,40 @@ body {
     margin: 0;
 }
 
-/* Contact Section */
-.contact ul {
-    list-style: none;
-    padding: 1rem;
+/* Zoom animation */
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
-.contact li {
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 2rem;
+}
+
+.contact-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-card li {
     margin: 0.5rem 0;
 }
 
